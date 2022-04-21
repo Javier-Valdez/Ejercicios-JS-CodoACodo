@@ -64,7 +64,7 @@ else {
 /* 9. Escribe un programa que pida una frase y escriba cuantas veces aparece la
 letra a */
 
-let frase = prompt("Escribe una frase");
+/* let frase = prompt("Escribe una frase");
 let letraBuscada = "a"
 let contador = 0;
 for (let i=0; i < frase.length; i++){
@@ -73,7 +73,7 @@ for (let i=0; i < frase.length; i++){
     }
 }
 console.log(`La frase "${frase}" contiene ${contador} veces la letra ${letraBuscada}.`)
-
+ */
 
 /* 10. Escribe un programa que pida una frase y escriba las vocales que aparecen */
 
@@ -89,23 +89,100 @@ cada una de las vocales */
 /* 13. Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o
 7 (sólo hay que comprobar si lo es por uno de los cuatro) */
 
+/* let numero = Number(prompt("Ingresa un numero..."));
+
+if (numero % 2 === 0) {
+    console.log(`El numero ${numero} es divisible por 2`);
+} else if (numero % 3 === 0){
+    console.log(`El numero ${numero} es divisible por 3`);
+} else if (numero % 5 === 0){
+    console.log(`El numero ${numero} es divisible por 5`);
+} else if (numero % 7 === 0){
+    console.log(`El numero ${numero} es divisible por 7`);
+} else {
+    console.log(`El numero ${numero} no es divisible por 2, 3, 5 ni 7`)
+} */
+
 
 /* 14. Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay
 que decir todos por los que es divisible) */
 
+/* let numero = Number(prompt("Ingresa un numero..."));
+
+if (numero % 2 === 0) {
+    console.log(`El numero ${numero} es divisible por 2`);
+} 
+if (numero % 3 === 0){
+    console.log(`El numero ${numero} es divisible por 3`);
+} 
+if (numero % 5 === 0){
+    console.log(`El numero ${numero} es divisible por 5`);
+} 
+if (numero % 7 === 0){
+    console.log(`El numero ${numero} es divisible por 7`);
+} 
+if (numero % 2 !== 0 && numero % 3 !== 0 && numero % 5 !== 0 && numero % 7 !== 0) {
+    console.log(`El numero ${numero} no es divisible por 2, 3, 5 ni 7`)
+} */
 
 /* 15. Escribir un programa que escriba en pantalla los divisores de un número dado */
 
+/* let numero = Number(prompt("Ingresa un numero..."));
+
+for (i=numero; i>1; i--){
+    if (numero % i === 0){
+        console.log(`${i} es un divisor valido para ${numero}`);
+    }
+} */
 
 /* 16. Escribir un programa que escriba en pantalla los divisores comunes de dos
 números dados */
+
+/* let numero1 = Number(prompt("Ingresa un primer numero..."));
+let numero2 = Number(prompt("Ingresa un segundo numero..."));
+let contador = 0;
+
+for (i = Math.min(numero1, numero2); i > 1; i--){
+    if (numero1 % i === 0 && numero2 % i === 0){
+        console.log(`${i} es un divisor valido para ${numero1} y ${numero2}`);
+        contador += 1;
+    }  
+}
+if (contador === 0){
+        console.log(`No existe ningun divisor comun para ${numero1} y ${numero2}`);
+} */
+
+/* for (i = Math.min(numero1, numero2); i > 1; i--){
+    if (numero1 % i === 0 && numero2 % i === 0){
+        document.write(`${i} es un divisor valido para ${numero1} y ${numero2}`);
+        contador += 1;
+    }        
+}
+if (contador === 0){
+        document.write(`No existe ningun divisor comun para ${numero1} y ${numero2}`);
+} */
 
 
 /* 17. Escribir un programa que nos diga si un número dado es primo (no es divisible
 por ninguno otro número que no sea él mismo o la unidad) */
 
+/* let numero = Number(prompt("Ingresa un numero..."));
+let esPrimo = true;
+
+for (i = 2; i < numero - 1; i++){
+    if (numero % i === 0){
+        esPrimo = false;
+    }
+}
+
+console.log(esPrimo === true ? `${numero} es un numero primo.` : `${numero} no es un numero primo.`); */
+
 
 /* 18. Pide la edad y si es mayor de 18 años indica que ya puede conducir */
+
+/* let edad = Number(prompt("Ingresa tu edad..."));
+
+console.log(edad >= 18 ? "Ya puedes conducir" : "Aun no tienes edad suficiente para conducir"); */
 
 
 /* 19. Pide una nota (número). Muestra la calificación según la nota:
@@ -115,6 +192,28 @@ por ninguno otro número que no sea él mismo o la unidad) */
 ● 6-7: Bien
 ● 7-9: Notable
 ● 9-10: Sobresaliente */
+
+let nota = Number(prompt("Ingresa tu nota del 0 al 10"));
+let calificación; 
+
+if (nota <= 3){
+    console.log("Muy deficiente");
+} 
+else if (nota > 3 && nota <= 5){
+    console.log("Insuficiente");
+}
+else if (nota === 6){
+    console.log("Suficiente");
+}
+else if (nota === 7){
+    console.log("Bien");
+}
+else if (nota > 7 && nota <= 9){
+    console.log("Notable");
+}
+else if (nota === 10){
+    console.log("Sobresaliente");
+}
 
 
 /* 20. Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al
