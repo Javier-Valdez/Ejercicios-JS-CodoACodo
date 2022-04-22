@@ -129,7 +129,7 @@ if (numero % 2 !== 0 && numero % 3 !== 0 && numero % 5 !== 0 && numero % 7 !== 0
 
 /* let numero = Number(prompt("Ingresa un numero..."));
 
-for (i=numero; i>1; i--){
+for (let i=numero; i>1; i--){
     if (numero % i === 0){
         console.log(`${i} es un divisor valido para ${numero}`);
     }
@@ -142,7 +142,7 @@ números dados */
 let numero2 = Number(prompt("Ingresa un segundo numero..."));
 let contador = 0;
 
-for (i = Math.min(numero1, numero2); i > 1; i--){
+for (let i = Math.min(numero1, numero2); i > 1; i--){
     if (numero1 % i === 0 && numero2 % i === 0){
         console.log(`${i} es un divisor valido para ${numero1} y ${numero2}`);
         contador += 1;
@@ -152,7 +152,7 @@ if (contador === 0){
         console.log(`No existe ningun divisor comun para ${numero1} y ${numero2}`);
 } */
 
-/* for (i = Math.min(numero1, numero2); i > 1; i--){
+/* for (let i = Math.min(numero1, numero2); i > 1; i--){
     if (numero1 % i === 0 && numero2 % i === 0){
         document.write(`${i} es un divisor valido para ${numero1} y ${numero2}`);
         contador += 1;
@@ -169,7 +169,7 @@ por ninguno otro número que no sea él mismo o la unidad) */
 /* let numero = Number(prompt("Ingresa un numero..."));
 let esPrimo = true;
 
-for (i = 2; i < numero - 1; i++){
+for (let i = 2; i < numero - 1; i++){
     if (numero % i === 0){
         esPrimo = false;
     }
@@ -193,7 +193,7 @@ console.log(edad >= 18 ? "Ya puedes conducir" : "Aun no tienes edad suficiente p
 ● 7-9: Notable
 ● 9-10: Sobresaliente */
 
-let nota = Number(prompt("Ingresa tu nota del 0 al 10"));
+/* let nota = Number(prompt("Ingresa tu nota del 0 al 10"));
 let calificación; 
 
 if (nota <= 3){
@@ -213,11 +213,22 @@ else if (nota > 7 && nota <= 9){
 }
 else if (nota === 10){
     console.log("Sobresaliente");
-}
+} */
 
 
 /* 20. Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al
 salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión */
+
+/* let cadena = prompt("Ingresa una cadena de texto, o 'cancelar' para salir...");
+let cadenasConcatenadas = "";
+
+while (cadena != "cancelar"){
+    cadenasConcatenadas += cadena + " - ";
+    cadena = prompt("Ingresa una cadena de texto, o 'cancelar' para salir...");
+    
+}
+
+console.log(cadenasConcatenadas); */
 
 
 /* 21. Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un
@@ -225,26 +236,35 @@ número deberá indicarse con un «alert» y seguir pidiendo. Al salir con “ca
 deberá indicarse la suma total de los números introducidos. */
 
 
+
+
 /* 22. Realizar una página con un script que calcule el valor de la letra de un número
 de DNI (Documento Nacional de Identidad).
 El algoritmo para calcular la letra del dni es el siguiente :
 ● El número debe ser entre 0 y 99999999
-● Debemos calcular el resto de la división entera entre el número y el número */
-
-
-/* 23.
+● Debemos calcular el resto de la división entera entre el número y el número 
 ● Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes:
 (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
 ● Si lo introducido no es un número deberá indicarse con un alert y volver a
 preguntar.
-● Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».
-23. Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma : 1
+● Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».*/
+
+
+/* 23. Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma : 
+1
 22
 333
 4444
 55555
 666666
 ……. */
+
+/* let contador = 1;
+
+for (let i=1; i <= 30; i++){
+    console.log(i.toString().repeat(contador));
+    contador += 1;
+} */
 
 
 /* 24. Haz un script que escriba una pirámide inversa de los números del 1 al
@@ -255,6 +275,13 @@ número que indique el usuario de la siguiente forma : (suponiendo que indica 6)
 333
 22
 1 */
+
+/* let numero = Number(prompt("Ingresa un numero..."));
+
+for (let i = numero; i >= 1; i--){
+    console.log(numero.toString().repeat(numero));
+    numero -= 1;
+} */
 
 
 /* 25. Un script que escriba los números del 1 al 500, que indique cuáles son
@@ -271,4 +298,33 @@ múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por e
 9 (Múltiplo de 9)
 10 */
 
-
+for (i=1; i <= 500; i++){
+    if (i % 4 === 0 && i % 9 === 0 && i % 5 === 0){
+        console.log(`${i} es multiplo de 4 y de 9`);
+        console.log("_____________________");
+    }
+    else if (i % 4 === 0 && i % 9 === 0){
+        console.log(`${i} es multiplo de 4 y de 9`);
+    }
+    else if (i % 4 === 0 && i % 5 === 0){
+        console.log(`${i} es multiplo de 4`);
+        console.log("_____________________");
+    }
+    else if (i % 9 === 0 && i % 5 === 0){
+        console.log(`${i} es multiplo de 9`);
+        console.log("_____________________");
+    }
+    else if (i % 4 === 0){
+        console.log(`${i} es multiplo de 4`);
+    }
+    else if (i % 9 === 0){
+        console.log(`${i} es multiplo de 9`);
+    }
+    else if (i % 5 === 0){
+        console.log(i);
+        console.log("_____________________");
+    }
+    else {
+        console.log(i);
+    }
+}
