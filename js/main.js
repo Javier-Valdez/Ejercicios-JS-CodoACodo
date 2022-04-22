@@ -77,13 +77,69 @@ console.log(`La frase "${frase}" contiene ${contador} veces la letra ${letraBusc
 
 /* 10. Escribe un programa que pida una frase y escriba las vocales que aparecen */
 
+/* let frase = prompt("Escribe una frase...");
+
+if (frase.toLowerCase().includes("a")){
+    console.log("La frase contiene la vocal 'a'");
+}
+if (frase.toLowerCase().includes("e")){
+    console.log("La frase contiene la vocal 'e'");
+}
+if (frase.toLowerCase().includes("i")){
+    console.log("La frase contiene la vocal 'i'");
+}
+if (frase.toLowerCase().includes("o")){
+    console.log("La frase contiene la vocal 'o'");
+}
+if (frase.toLowerCase().includes("u")){
+    console.log("La frase contiene la vocal 'u'");
+} */
+
+
+
 
 /* 11. Escribe un programa que pida una frase y escriba cuántas de las letras que
 tiene son vocales */
 
+/* let frase = prompt("Escribe una frase...");
+let contador = 0;
+
+for (let i = 0; i < frase.length; i++){
+    if (frase[i].toLowerCase() == "a" || frase[i].toLowerCase() == "e" || frase[i].toLowerCase() == "i" || frase[i].toLowerCase() == "o" || frase[i].toLowerCase() == "u"){
+        contador += 1;
+    } 
+}
+console.log(`La frase "${frase}" contiene ${contador} vocales`); */
+
 
 /* 12. Escribe un programa que pida una frase y escriba cuántas veces aparecen
 cada una de las vocales */
+
+let frase = prompt("Escribe una frase...");
+let contadorA = 0;
+let contadorE = 0;
+let contadorI = 0;
+let contadorO = 0;
+let contadorU = 0;
+
+for (i = 0; i < frase.length; i++){
+    if (frase[i].toLowerCase() == "a"){
+        contadorA += 1;
+    }
+    if (frase[i].toLowerCase() == "e"){
+        contadorE +=1;
+    }
+    if (frase[i].toLowerCase() == "i"){
+        contadorI += 1;
+    }
+    if (frase[i].toLowerCase() == "o"){
+        contadorO += 1;
+    }
+    if (frase[i].toLowerCase() == "u"){
+        contadorU += 1;
+    }
+}
+console.log(`La frase "${frase}" contiene ${contadorA} "a", ${contadorE} "e", ${contadorI} "i", ${contadorO} "o", y ${contadorU} "u".`)
 
 
 /* 13. Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o
@@ -298,7 +354,7 @@ múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por e
 9 (Múltiplo de 9)
 10 */
 
-for (i=1; i <= 500; i++){
+/* for (i=1; i <= 500; i++){
     if (i % 4 === 0 && i % 9 === 0 && i % 5 === 0){
         console.log(`${i} es multiplo de 4 y de 9`);
         console.log("_____________________");
@@ -327,4 +383,4 @@ for (i=1; i <= 500; i++){
     else {
         console.log(i);
     }
-}
+} */
