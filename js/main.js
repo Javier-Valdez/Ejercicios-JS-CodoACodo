@@ -115,7 +115,7 @@ console.log(`La frase "${frase}" contiene ${contador} vocales`); */
 /* 12. Escribe un programa que pida una frase y escriba cuántas veces aparecen
 cada una de las vocales */
 
-let frase = prompt("Escribe una frase...");
+/* let frase = prompt("Escribe una frase...");
 let contadorA = 0;
 let contadorE = 0;
 let contadorI = 0;
@@ -139,7 +139,7 @@ for (i = 0; i < frase.length; i++){
         contadorU += 1;
     }
 }
-console.log(`La frase "${frase}" contiene ${contadorA} "a", ${contadorE} "e", ${contadorI} "i", ${contadorO} "o", y ${contadorU} "u".`)
+console.log(`La frase "${frase}" contiene ${contadorA} "a", ${contadorE} "e", ${contadorI} "i", ${contadorO} "o", y ${contadorU} "u".`); */
 
 
 /* 13. Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o
@@ -194,10 +194,10 @@ for (let i=numero; i>1; i--){
 /* 16. Escribir un programa que escriba en pantalla los divisores comunes de dos
 números dados */
 
-/* let numero1 = Number(prompt("Ingresa un primer numero..."));
+/*  let numero1 = Number(prompt("Ingresa un primer numero..."));
 let numero2 = Number(prompt("Ingresa un segundo numero..."));
 let contador = 0;
-
+/*
 for (let i = Math.min(numero1, numero2); i > 1; i--){
     if (numero1 % i === 0 && numero2 % i === 0){
         console.log(`${i} es un divisor valido para ${numero1} y ${numero2}`);
@@ -208,14 +208,14 @@ if (contador === 0){
         console.log(`No existe ningun divisor comun para ${numero1} y ${numero2}`);
 } */
 
-/* for (let i = Math.min(numero1, numero2); i > 1; i--){
+for (let i = Math.min(numero1, numero2); i > 1; i--){
     if (numero1 % i === 0 && numero2 % i === 0){
-        document.write(`${i} es un divisor valido para ${numero1} y ${numero2}`);
+        document.write(`<p>${i} es un divisor valido para ${numero1} y ${numero2}</p>`);
         contador += 1;
     }        
 }
 if (contador === 0){
-        document.write(`No existe ningun divisor comun para ${numero1} y ${numero2}`);
+        document.write(`<p>No existe ningun divisor comun para ${numero1} y ${numero2}</p>`);
 } */
 
 
