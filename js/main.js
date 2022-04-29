@@ -666,16 +666,12 @@ cuadrado
 let doble = numero => numero * 2;
 let cuadrado = numero => numero * numero;
 
-function imprimirElDobleDelSiguienteAlCuadrado(numero) {
-    let numDoble = doble(numero);
-    let siguienteDelDoble = siguiente(numDoble);
-    let cuadradoDelSiguienteDelDoble = cuadrado(siguienteDelDoble);
-
-    console.log(cuadradoDelSiguienteDelDoble);
+function devolverSiguienteDelDobleAlCuadrado(numero) {
+    return cuadrado(doble(siguiente(numero)));   
 }
 
 let numero = Number(prompt("Ingresa un numero..."));
-imprimirElDobleDelSiguienteAlCuadrado(numero); */
+console.log(devolverSiguienteDelDobleAlCuadrado(numero)); */
 
 
 /*
@@ -1087,7 +1083,7 @@ más larga de una frase. Por ejemplo, si x = "Tutorial de desarrollo web",
 el resultado debería ser "Desarrollo"
 */
 
-function buscarPalabraMasLarga(frase){
+/* function buscarPalabraMasLarga(frase){
     let palabras = frase.split(" ");
     let masLarga = palabras[0];
     
@@ -1102,6 +1098,6 @@ function buscarPalabraMasLarga(frase){
     
 }
 
-console.log(buscarPalabraMasLarga("el desarrollo web es una tarea muy compleja para el desarrollador inexperto"));
+console.log(buscarPalabraMasLarga("el desarrollo web es una tarea muy compleja para el desarrollador inexperto")); */
 
 
